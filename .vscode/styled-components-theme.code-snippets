@@ -1,0 +1,22 @@
+{
+	"colors": {
+	  "prefix": ["colors", "theme-colors"],
+	  "body": ["${({ theme }) => theme.colors.$0}"],
+	  "description": "Utiliza as cores definidas globalmente."
+	},
+	"fonts": {
+	  "prefix": ["fonts", "theme-fonts"],
+	  "body": ["${({ theme }) => theme.fonts.$0}"],
+	  "description": "Utiliza as fontes definidas globalmente."
+	},
+	"RFPercentage": {
+	  "prefix": ["rfp"],
+	  "body": ["${RFPercentage($0)}px"],
+	  "description": "Use RFPercentage."
+	},
+	"RFValue": {
+	  "prefix": ["rfv"],
+	  "body": ["${RFValue($0)}px"],
+	  "description": "Use RFValue."
+	},
+  }
