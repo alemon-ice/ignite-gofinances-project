@@ -10,7 +10,7 @@ import {
 import AppLoading from 'expo-app-loading';
 
 import { theme } from './src/shared/styles/theme';
-import { Dashboard } from './src/screens/Dashboard';
+import { SignIn } from './src/screens';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +26,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style='auto' />
-      <Dashboard />
+      <SignIn />
     </ThemeProvider>
   );
 }

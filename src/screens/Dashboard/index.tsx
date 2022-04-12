@@ -58,7 +58,7 @@ const data: IDataListProps[] = [
     },
 ]
 
-export const Dashboard: React.FC = () => {
+const Dashboard: React.FC = () => {
     return (
         <Container>
             <Header>
@@ -109,3 +109,5 @@ export const Dashboard: React.FC = () => {
         </Container>
     );
 }
+
+export default Dashboard
