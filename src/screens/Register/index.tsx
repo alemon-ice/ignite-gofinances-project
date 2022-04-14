@@ -1,5 +1,5 @@
-import React from 'react';
-import { Input, Button } from '../../shared/components'
+import React, { useState } from 'react';
+import { Input, Button, TransactionTypeButton } from '../../shared/components'
 
 import {
     Container,
@@ -7,24 +7,46 @@ import {
     Title,
     Form,
     Fields,
+    TransactionsTypes,
 } from './styles';
 
 const Register: React.FC = () => {
-  return (
-    <Container>
-        <Header>
-            <Title>Cadastro</Title>
-        </Header>
+    const [transactionType, setTransactionType]= useState('')
 
-        <Form>
-            <Fields>
-                <Input placeholder='Nome' />
-                <Input placeholder='Preço' />
-            </Fields>
-            <Button>Enviar</Button>
-        </Form>
-    </Container>
-  );
+    function handleTransactionsTypeSelect(type: 'up' | 'down') {
+        setTransactionType(type)
+    }
+
+    return (
+        <Container>
+            <Header>
+                <Title>Cadastro</Title>
+            </Header>
+
+            <Form>
+                <Fields>
+                    <Input placeholder='Nome' />
+                    <Input placeholder='Preço' />
+
+                    <TransactionsTypes>
+                        <TransactionTypeButton
+                            type='up'
+                            title='Income'
+                            isActive={transactionType === 'up'}
+                            onPress={() => handleTransactionsTypeSelect('up')}
+                        />
+                        <TransactionTypeButton
+                            type='down'
+                            title='Outcome'
+                            isActive={transactionType === 'down'}
+                            onPress={() => handleTransactionsTypeSelect('down')}
+                        />
+                    </TransactionsTypes>
+                </Fields>
+                <Button>Enviar</Button>
+            </Form>
+        </Container>
+    );
 }
 
 export default Register;
