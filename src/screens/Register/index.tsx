@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { Input, Button, TransactionTypeButton } from '../../shared/components'
+import {
+    Input,
+    Button,
+    CategorySelect,
+    TransactionTypeButton
+} from '../../shared/components'
 
 import {
     Container,
@@ -42,6 +47,8 @@ const Register: React.FC = () => {
                             onPress={() => handleTransactionsTypeSelect('down')}
                         />
                     </TransactionsTypes>
+
+                    <CategorySelect title="Categoria" />
                 </Fields>
                 <Button>Enviar</Button>
             </Form>
