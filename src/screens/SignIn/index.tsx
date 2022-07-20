@@ -1,10 +1,10 @@
-import React from 'react'
-import { RFValue } from 'react-native-responsive-fontsize'
+import React from "react";
+import { RFValue } from "react-native-responsive-fontsize";
 
-import AppleSVG from '../../assets/apple.svg'
-import GoogleSVG from '../../assets/google.svg'
-import LogoSVG from '../../assets/logo.svg'
-import { SignInSocialButton } from '../../shared/components'
+import AppleSVG from "../../assets/apple.svg";
+import GoogleSVG from "../../assets/google.svg";
+import LogoSVG from "../../assets/logo.svg";
+import { SignInSocialButton } from "../../shared/components";
 
 import {
     Container,
@@ -13,10 +13,10 @@ import {
     Title,
     SIgnInTitle,
     Footer,
-    FooterWrapper
-} from './styles'
+    FooterWrapper,
+} from "./styles";
 
-const SignIn: React.FC = () => {
+function SignIn() {
     return (
         <Container>
             <Header>
@@ -24,14 +24,14 @@ const SignIn: React.FC = () => {
                     <LogoSVG width={RFValue(120)} height={RFValue(68)} />
 
                     <Title>
-                        Controle suas {'\n'}
-                        finanças de forma {'\n'}
+                        Controle suas {"\n"}
+                        finanças de forma {"\n"}
                         muito simples
                     </Title>
                 </TitleWrapper>
 
                 <SIgnInTitle>
-                    Faça seu login com {'\n'}
+                    Faça seu login com {"\n"}
                     uma das contas abaixo
                 </SIgnInTitle>
             </Header>
@@ -39,11 +39,11 @@ const SignIn: React.FC = () => {
             <Footer>
                 <FooterWrapper>
                     <SignInSocialButton
-                        title='Entrar com Google'
+                        title="Entrar com Google"
                         svg={GoogleSVG}
                     />
                     <SignInSocialButton
-                        title='Entrar com Apple'
+                        title="Entrar com Apple"
                         svg={AppleSVG}
                     />
                 </FooterWrapper>

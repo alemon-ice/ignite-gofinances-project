@@ -1,6 +1,6 @@
-import React from 'react';
-import { HighLightCard, TransactionCard } from '../../shared/components';
-import { ITransactionCardProps } from '../../shared/components/TransactionCard';
+import React from "react";
+import { HighLightCard, TransactionCard } from "../../shared/components";
+import { ITransactionCardProps } from "../../shared/components/TransactionCard";
 
 import {
     Container,
@@ -16,7 +16,7 @@ import {
     Transactions,
     Title,
     TransactionList,
-} from './styles';
+} from "./styles";
 
 export interface IDataListProps extends ITransactionCardProps {
     id: string;
@@ -24,47 +24,51 @@ export interface IDataListProps extends ITransactionCardProps {
 
 const data: IDataListProps[] = [
     {
-        id: '1',
-        type: 'positive',
+        id: "1",
+        type: "positive",
         title: "Desenvolvimento de site",
         amount: "R$ 6.000,00",
         category: {
-            icon: 'dollar-sign',
-            name: 'Vendas'
+            icon: "dollar-sign",
+            name: "Vendas",
         },
         date: "03/04/2022",
     },
     {
-        id: '2',
-        type: 'negative',
+        id: "2",
+        type: "negative",
         title: "Pizzaria",
         amount: "R$ 60,00",
         category: {
-            icon: 'coffee',
-            name: 'Alimentação'
+            icon: "coffee",
+            name: "Alimentação",
         },
         date: "03/04/2022",
     },
     {
-        id: '3',
-        type: 'negative',
+        id: "3",
+        type: "negative",
         title: "Aluguel do apartamento",
         amount: "R$ 1.200,00",
         category: {
-            icon: 'shopping-bag',
-            name: 'Casa'
+            icon: "shopping-bag",
+            name: "Casa",
         },
         date: "03/04/2022",
     },
-]
+];
 
-const Dashboard: React.FC = () => {
+function Dashboard() {
     return (
         <Container>
             <Header>
                 <UserWrapper>
                     <UserInfo>
-                        <Photo source={{ uri: 'https://avatars.githubusercontent.com/u/43359988?v=4' }} />
+                        <Photo
+                            source={{
+                                uri: "https://avatars.githubusercontent.com/u/43359988?v=4",
+                            }}
+                        />
                         <User>
                             <UserGreeting>Olá, </UserGreeting>
                             <UserName>Rafael</UserName>
@@ -74,7 +78,6 @@ const Dashboard: React.FC = () => {
                     <Icon name="power" />
                 </UserWrapper>
             </Header>
-
 
             <HighLightCards>
                 <HighLightCard
@@ -102,7 +105,7 @@ const Dashboard: React.FC = () => {
 
                 <TransactionList
                     data={data}
-                    keyExtractor={item => item.id}
+                    keyExtractor={(item) => item.id}
                     renderItem={({ item }) => <TransactionCard data={item} />}
                 />
             </Transactions>
@@ -110,4 +113,4 @@ const Dashboard: React.FC = () => {
     );
 }
 
-export default Dashboard
+export default Dashboard;
