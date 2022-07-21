@@ -1,12 +1,10 @@
-import React from 'react';
-import { TextInputProps } from 'react-native';
+import React from "react";
+import { TextInputProps } from "react-native";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 function Input(props: TextInputProps) {
-  return (
-      <Container {...props}></Container>
-  );
+    return <Container {...props} />;
 }
 
 export default Input;

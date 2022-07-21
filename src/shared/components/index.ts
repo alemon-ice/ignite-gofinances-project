@@ -1,6 +1,7 @@
-export { default as Input } from './Form/Input'
 export { default as Button } from './Form/Button'
 export { default as CategorySelectButton } from './Form/CategorySelectButton'
+export { default as Input } from './Form/Input'
+export { default as InputForm } from './Form/InputForm'
 export { default as TransactionTypeButton } from './Form/TransactionTypeButton'
 export { default as HighLightCard } from './HighLightCard'
 export { default as SignInSocialButton } from './SignInSocialButton'
